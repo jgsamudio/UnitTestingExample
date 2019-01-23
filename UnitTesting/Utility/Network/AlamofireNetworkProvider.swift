@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AlamofireNetworkProvider: NetworkProvider {
+class AlamofireNetworkProvider {
 
     func loginUser(email: String, password: String) {
         // Makes cool network call.

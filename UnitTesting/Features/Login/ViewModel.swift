@@ -12,50 +12,37 @@ class ViewModel {
 
     weak var delegate: ViewDelegate?
 
-    var email: String = ""
-    var password: String = ""
+    private var email: String = ""
+    private var password: String = ""
 
-    private var networkProvider: NetworkProvider
-    private var credentialValidator: CredentialValidator
-
-    init(networkProvider: NetworkProvider,
-         credentialValidator: CredentialValidator = CredentialValidator()) {
-        self.networkProvider = networkProvider
-        self.credentialValidator = credentialValidator
-    }
+    private var networkProvider = AlamofireNetworkProvider()
 
     func loginUser() {
-        if credentialValidator.isValid(email: email) &&
-            credentialValidator.isValid(password: password) {
+        if isValidEmail() && isValidPassword() {
             networkProvider.loginUser(email: email, password: password)
             delegate?.hideError()
         } else {
             delegate?.display(error: "Email or Password is incorrect.")
         }
     }
+    
+    func set(email: String) {
+        self.email = email
+    }
+    
+    func set(password: String) {
+        self.password = password
+    }
 }
 
-//private extension ViewModel {
-//
-//    func isValidEmail() -> Bool {
-//        return email.contains("@") &&
-//            email.count > 5
-//    }
-//
-//    func isValidPassword() -> Bool {
-//        return password.count > 3
-//    }
-//
-//}
+private extension ViewModel {
 
-class CredentialValidator {
-
-    func isValid(email: String) -> Bool {
+    func isValidEmail() -> Bool {
         return email.contains("@") &&
             email.count > 5
     }
 
-    func isValid(password: String) -> Bool {
+    func isValidPassword() -> Bool {
         return password.count > 3
     }
 

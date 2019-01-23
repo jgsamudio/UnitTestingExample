@@ -16,7 +16,7 @@ protocol NetworkProvider {
 class ViewController: UIViewController {
 
     lazy var viewModel: ViewModel = {
-        let viewModel = ViewModel(networkProvider: AlamofireNetworkProvider())
+        let viewModel = ViewModel()
         viewModel.delegate = self
         return viewModel
     }()
@@ -37,9 +37,9 @@ extension ViewController: UITextFieldDelegate {
                    replacementString string: String) -> Bool {
 
         if textField == emailTextField {
-            viewModel.email = (textField.text ?? "") + string
+            viewModel.set(email: (textField.text ?? "") + string)
         } else if textField == passwordTextField {
-            viewModel.password = (textField.text ?? "") + string
+            viewModel.set(password: (textField.text ?? "") + string) 
         }
         return true
     }

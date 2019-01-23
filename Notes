@@ -1,10 +1,17 @@
-//
-//  ViewModelTests.swift
-//  UnitTestingTests
-//
-//  Created by Jonathan Samudio on 12/4/18.
-//  Copyright © 2018 Jonathan Samudio. All rights reserved.
-//
+class CredentialValidator {
+
+    func isValid(email: String) -> Bool {
+        return email.contains("@") &&
+            email.count > 5
+    }
+
+    func isValid(password: String) -> Bool {
+        return password.count > 3
+    }
+
+}
+
+//////////////////////////////////////////////////////
 
 import XCTest
 @testable import UnitTesting
