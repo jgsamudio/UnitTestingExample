@@ -16,7 +16,7 @@ protocol NetworkProvider {
 class ViewController: UIViewController {
 
     lazy var viewModel: ViewModel = {
-        let viewModel = ViewModel()
+        let viewModel = ViewModel(credentialValidator: LoginCredentialValidator())
         viewModel.delegate = self
         return viewModel
     }()

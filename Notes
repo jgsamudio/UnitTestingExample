@@ -94,3 +94,47 @@ class ViewModelTests: XCTestCase {
         XCTAssertTrue(delegate.displayErrorWasCalled)
         XCTAssertEqual(delegate.error, "Email or Password is incorrect.")    }
 }
+
+
+////////////////////////////////////////////////////////////////////////
+
+import Foundation
+@testable import UnitTesting
+
+class MockViewDelegate: ViewDelegate {
+
+    var displayErrorWasCalled = false
+    var hideErrorWasCalled = false
+    var error = ""
+
+    func display(error: String) {
+        displayErrorWasCalled = true
+        self.error = error
+    }
+
+    func hideError() {
+        hideErrorWasCalled = true
+    }
+
+}
+
+////////////////////////////////////////////////////////////////////////
+
+
+import Foundation
+@testable import UnitTesting
+
+class MockNetworkProvider: NetworkProvider {
+
+    var loginUserWasCalled = false
+    var email = ""
+    var password = ""
+
+    func loginUser(email: String, password: String) {
+        loginUserWasCalled = true
+        self.email = email
+        self.password = password
+    }
+
+}
+

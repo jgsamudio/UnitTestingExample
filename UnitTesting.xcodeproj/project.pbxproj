@@ -17,6 +17,9 @@
 		202FB3DD21B6CD7B0048C96A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FB3DC21B6CD7B0048C96A /* ViewModel.swift */; };
 		202FB3DF21B6CD9C0048C96A /* AlamofireNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FB3DE21B6CD9C0048C96A /* AlamofireNetworkProvider.swift */; };
 		202FB3E121B6CEFB0048C96A /* ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FB3E021B6CEFB0048C96A /* ViewDelegate.swift */; };
+		209E1B9F21F8F02700A3AFE0 /* LoginCredentialValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E1B9E21F8F02700A3AFE0 /* LoginCredentialValidator.swift */; };
+		209E1BA121F8F03600A3AFE0 /* CredentialValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E1BA021F8F03600A3AFE0 /* CredentialValidator.swift */; };
+		209E1BA321F8F05B00A3AFE0 /* LoginCredentialValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E1BA221F8F05B00A3AFE0 /* LoginCredentialValidatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		202FB3DC21B6CD7B0048C96A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		202FB3DE21B6CD9C0048C96A /* AlamofireNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkProvider.swift; sourceTree = "<group>"; };
 		202FB3E021B6CEFB0048C96A /* ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDelegate.swift; sourceTree = "<group>"; };
+		209E1B9E21F8F02700A3AFE0 /* LoginCredentialValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentialValidator.swift; sourceTree = "<group>"; };
+		209E1BA021F8F03600A3AFE0 /* CredentialValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialValidator.swift; sourceTree = "<group>"; };
+		209E1BA221F8F05B00A3AFE0 /* LoginCredentialValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentialValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,8 @@
 				202FB3B021B6C6C10048C96A /* ViewController.swift */,
 				202FB3DC21B6CD7B0048C96A /* ViewModel.swift */,
 				202FB3E021B6CEFB0048C96A /* ViewDelegate.swift */,
+				209E1B9E21F8F02700A3AFE0 /* LoginCredentialValidator.swift */,
+				209E1BA021F8F03600A3AFE0 /* CredentialValidator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 		202FB3E721B6D1840048C96A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				209E1BA221F8F05B00A3AFE0 /* LoginCredentialValidatorTests.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -324,6 +333,8 @@
 				202FB3B121B6C6C10048C96A /* ViewController.swift in Sources */,
 				202FB3DF21B6CD9C0048C96A /* AlamofireNetworkProvider.swift in Sources */,
 				202FB3E121B6CEFB0048C96A /* ViewDelegate.swift in Sources */,
+				209E1B9F21F8F02700A3AFE0 /* LoginCredentialValidator.swift in Sources */,
+				209E1BA121F8F03600A3AFE0 /* CredentialValidator.swift in Sources */,
 				202FB3DD21B6CD7B0048C96A /* ViewModel.swift in Sources */,
 				202FB3AF21B6C6C10048C96A /* AppDelegate.swift in Sources */,
 			);
@@ -334,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				202FB3C421B6C6C60048C96A /* UnitTestingTests.swift in Sources */,
+				209E1BA321F8F05B00A3AFE0 /* LoginCredentialValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

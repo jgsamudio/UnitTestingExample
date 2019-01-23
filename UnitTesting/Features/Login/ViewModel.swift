@@ -16,9 +16,14 @@ class ViewModel {
     private var password: String = ""
 
     private var networkProvider = AlamofireNetworkProvider()
+    private var credentialValidator: CredentialValidator
+    
+    init(credentialValidator: CredentialValidator) {
+        self.credentialValidator = credentialValidator
+    }
 
     func loginUser() {
-        if isValidEmail() && isValidPassword() {
+        if credentialValidator.isValid(email: email) && credentialValidator.isValid(password: password) {
             networkProvider.loginUser(email: email, password: password)
             delegate?.hideError()
         } else {
@@ -33,17 +38,4 @@ class ViewModel {
     func set(password: String) {
         self.password = password
     }
-}
-
-private extension ViewModel {
-
-    func isValidEmail() -> Bool {
-        return email.contains("@") &&
-            email.count > 5
-    }
-
-    func isValidPassword() -> Bool {
-        return password.count > 3
-    }
-
 }
